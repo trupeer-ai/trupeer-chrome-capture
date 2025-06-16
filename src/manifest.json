@@ -1,0 +1,120 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDesc__",
+  "default_locale": "en",
+  "version": "1.6.2",
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "action": {
+    "default_icon": "assets/img/icon-34.png"
+  },
+  "icons": {
+    "128": "assets/img/icon-128.png"
+  },
+  "host_permissions": [
+    "https://*.trupeer.ai/*",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "contentScript.bundle.js"
+      ],
+      "css": [
+        "assets/fonts/fonts.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content.styles.css",
+        "blank.mp4",
+        "playground.html",
+        "editor.html",
+        "assets/*",
+        "setup.html",
+        "worker.js",
+        "vendor/*",
+        "recorder.html",
+        "recorderoffscreen.html",
+        "sandbox.html",
+        "wrapper.html",
+        "camera.html",
+        "permissions.html",
+        "region.html",
+        "waveform.html",
+        "playground.html",
+        "editorfallback.html",
+        "download.html",
+        "*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "oauth2": {
+    "client_id": "560517327251-m7n1k3kddknu7s9s4ejvrs1bj91gutd7.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+  },
+  "cross_origin_embedder_policy": {
+    "value": "require-corp"
+  },
+  "cross_origin_opener_policy": {
+    "value": "same-origin"
+  },
+  "content_security_policy": {
+    "sandbox": "sandbox allow-scripts allow-modals allow-popups; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; object-src 'self';worker-src 'self' blob: ;",
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; media-src 'self' data: blob: *;"
+  },
+  "sandbox": {
+    "pages": [
+      "editor.html"
+    ]
+  },
+  "commands": {
+    "start-recording": {
+      "suggested_key": {
+        "default": "Alt+Shift+G"
+      },
+      "description": "Start recording"
+    },
+    "cancel-recording": {
+      "suggested_key": {
+        "default": "Alt+Shift+X"
+      },
+      "description": "Cancel recording"
+    },
+    "pause-recording": {
+      "suggested_key": {
+        "default": "Alt+Shift+M"
+      },
+      "description": "Pause/Resume recording"
+    }
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "tabCapture",
+    "scripting",
+    "unlimitedStorage"
+  ],
+  "optional_permissions": [
+    "offscreen",
+    "desktopCapture"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "https://*.trupeer.ai/*"
+    ]
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj037CMBzzNusNMO4tuTK6rIpkxuQKbyn8+VLc849VRGczrKX4to9p+IkVvYOfrOI6sWaSS6C398ofsKvkyGI4ZJN8KAXIzfr/ATAhwH+1LiD741xWA2CRfhk6qy4tUUisHR18/DdErxCB/GJlapiRBGZdE0FeGxUU2wBgF8fMfoZmzZ3kThVznl0z91k9pn0FRmHiruD1GECYVD4zuzmdEimM27nFpOWRWeUlxmYf/4CJHa0B0DbIQn+YpF073a/ZZ6dD/0R6mC8msEDahWsIZ8SDaFV9zJMGyuM41OfxMRa3R6v9v/BjZal1qUk3h+sJlnrJLfkQNK47BDmqjIvhQIDAQAB"
+}

@@ -1,0 +1,11 @@
+This project is a fork of Screenity (https://github.com/alyssaxuu/screenity),
+originally created by Alyssa X, and licensed under the GNU General Public License v3.0 (GPLv3).
+
+Substantial modifications have been made to the original source code by Trupeer as of 2025.
+These modifications apply to the majority of the files in this repository, including core logic, UI components, and functionality.
+
+All modifications are provided under the terms of the GPLv3 license.
+The original LICENSE is preserved in the LICENSE file.
+
+This project is not affiliated with or endorsed by the original author.
+x

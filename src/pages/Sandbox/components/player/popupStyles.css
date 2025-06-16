@@ -1,0 +1,33 @@
+.popup-content {
+  margin: auto;
+  width: 50%;
+  padding: 0px;
+  background: none;
+  border: none;
+}
+
+.loading-popup-content {
+  padding: 8px;
+  background: #6f66c5;
+  border-radius: 15px; /* Rounded corners */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+  font-family: "Arial", sans-serif; /* Better font */
+  max-width: 300px; /* Width of the popup */
+  justify-content: center;
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.loading-popup-text {
+  font-size: 16px; /* Slightly larger text */
+  color: #fff; /* Darker text color */
+}
+
+.loader-container {
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+}
