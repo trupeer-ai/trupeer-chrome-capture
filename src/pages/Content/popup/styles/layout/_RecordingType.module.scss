@@ -1,0 +1,48 @@
+.recordingButton {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  padding: 4px 8px;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  white-space: nowrap;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #817FD5, #6F66C5);
+
+  @media (min-width: 768px) {
+    gap: 12px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(to bottom, #6F66C5, #6055AD);
+    cursor: pointer;
+  }
+
+  &:disabled {
+    color: #9CA3AF;
+    background: #E5E7EB;
+    cursor: not-allowed;
+  }
+} 
+
+.recordingButton-disabled {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  color: #9CA3AF; // gray-400
+  font-family: sans-serif;
+  font-weight: normal;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #E5E7EB; // gray-200
+  cursor: not-allowed;
+}
